@@ -1,11 +1,7 @@
-'use client'
-import Input from "./Input"
+import Client from './Client';
+import Input from "./Input";
 
 export default function Task12() {
-
-    function show() {
-        alert('click')
-    }
 
     return (
         <>
@@ -15,9 +11,8 @@ export default function Task12() {
                 сообщением ‘click’.
             </p>
 
-            <Input></Input>
-            <Input></Input>
-            <button onClick={show}>Зарегаться</button>
+            <Client Input={Input} />
+
         </>
     )
 }
