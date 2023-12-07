@@ -16,6 +16,9 @@ export default function Home() {
       <h3><Link href='./task11'>Задача 11</Link></h3>
       <h3><Link href='./task12'>Задача 12</Link></h3>
       <h3><Link href='./task13'>Задача 13</Link></h3>
+      <h3><Link href='./task14'>Задача 14</Link></h3>
+      <h3><Link href='./task15'>Задача 15</Link></h3>
+      <h3><Link href='./task16'>Задача 16</Link></h3>
     </>
   )
 }
