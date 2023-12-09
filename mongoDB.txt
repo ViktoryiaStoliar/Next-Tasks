@@ -1,0 +1,65 @@
+use university
+switched to db university
+db.students.insertMany([
+  {"name": "Vika", "surname": "Stolyar", "age": 25, "phone": "+375298210823"},
+  {"name": "Genya", "surname": "sgadhg", "age": 25, "phone": "+375294563211"}
+  ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("65721230a8f08c02562fbc62"),
+    '1': ObjectId("65721230a8f08c02562fbc63")
+  }
+}
+db.students.find()
+{
+  _id: ObjectId("65721230a8f08c02562fbc62"),
+  name: 'Vika',
+  surname: 'Stolyar',
+  age: 25,
+  phone: '+375298210823'
+}
+{
+  _id: ObjectId("65721230a8f08c02562fbc63"),
+  name: 'Genya',
+  surname: 'sgadhg',
+  age: 25,
+  phone: '+375294563211'
+}
+db.students.replaceOne({name: 'Genya'}, {name: 'Fedor'})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.students.updateOne({name: "Vika", age: 25}, {$set: {age: 28}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.students.replaceOne({name: 'Fedor'}, {name: 'Fedor', surname: 'JHnbvkn', age: 28, phone: '+375298431259'})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.students.deleteOne({name: "Fedor"})
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+db.students.find()
+{
+  _id: ObjectId("65721230a8f08c02562fbc62"),
+  name: 'Vika',
+  surname: 'Stolyar',
+  age: 28,
+  phone: '+375298210823'
+}
