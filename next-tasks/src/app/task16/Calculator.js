@@ -7,7 +7,7 @@ const Calculator = () => {
     return (
         <div>
             <input onChange={(e) => setVal(e.target.value)}></input>
-            {/* <button onClick={ }>Вычислить</button> */}
+            <button onClick={ }>Вычислить</button>
         </div>
     );
 }
