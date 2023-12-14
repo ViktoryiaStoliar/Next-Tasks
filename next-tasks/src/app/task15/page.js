@@ -5,7 +5,6 @@ import { useState } from "react";
 
 export default function Task15() {
 
-    const [valAdd, setValAdd] = useState('');
     const [button, setButton] = useState('');
 
     return (
@@ -15,7 +14,8 @@ export default function Task15() {
             </p>
 
             <TaskList button={button}/>
-            <AddTask valAdd={valAdd} setValAdd={setValAdd} setButton={setButton}/>
+            {/* <AddTask valAdd={valAdd} setValAdd={setValAdd} setButton={setButton}/> */}
+            <AddTask setButton={setButton}/>
         </>
     )
 }

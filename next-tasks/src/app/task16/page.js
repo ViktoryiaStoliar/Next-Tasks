@@ -1,8 +1,13 @@
-import Calculator from "./Calculator";
+// import Calculator from "./Calculator";
+'use client';
+
+import { useState } from "react";
 
 const Task16 = () => {
 
+    const [val, setVal] = useState('');
 
+    const arr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '+', '-', '*', "/"]
 
     return (
         <div>
@@ -13,9 +18,15 @@ const Task16 = () => {
                 данные и выполняет математические операции для расчета итогового результата.
             </p>
 
-            <Calculator />
+            {/* <Calculator /> */}
+            {arr.map((el) =>
+                <button onClick={(e) =>
+                    setVal(e.target.textContent)}>{el}</button>
+            )}
+            <h3>{val}</h3>
+
         </div>
     );
 }
 
-export default Page;
+export default Task16;
